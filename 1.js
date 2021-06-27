@@ -1,8 +1,6 @@
     'use strict';
 
-let Celsia = +prompt('Введите числом температуру в градусах цельсия');
-let Farenheit = null;
+    let celsia = +prompt('Введите числом температуру в градусах цельсия');
+    let farenheit = (9 / 5) * celsia + 32;
 
-Farenheit = (9 / 5) * Celsia + 32;
-
-document.write('Ответ: ' + Farenheit.toFixed(2) + ' градусов по фаренгейту.');
+    document.write('Ответ: ' + farenheit.toFixed(2) + ' градусов по фаренгейту.');

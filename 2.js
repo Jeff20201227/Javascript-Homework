@@ -1,8 +1,6 @@
 'use strict';
 
-let admin;
 let name = 'Василий';
-
-admin = name;
+let admin = name;
 
 document.write('Ответ: ' + admin );

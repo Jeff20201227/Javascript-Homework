@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Задание №3</h1>
+    <p>Объявить две переменные a и b и задать им целочисленные произвольные начальные значения.Затем
+        написать скрипт, который работает по следующему принципу: <br \ />
+        - 1. если a и b положительные, вывести их разность (ноль можно считать положительным числом);<br \ />
+        - 2. если а и b отрицательные, вывести их произведение;<br \ />
+        - 3. * (этот пункт по сложнее, делайте по желанию) если а и b разных знаков, вывести их сумму;</p>
+
+    <script>
+        'use strict';
+        let a = +prompt('Введите число a');
+        document.write('а' + ' = ' + a + '<br\ />');
+        let b = +prompt('Введите число b');
+        document.write('b' + ' = ' + b + '<br\ />');
+
+        if (a >= 0 && b >= 0) {
+            let result_1;
+            result_1 = a - b;
+            document.write('Ответ 1: a - b = ' + result_1);
+        } else if (a < 0 && b < 0) {
+            let result_2;
+            result_2 = a * b;
+            document.write('Ответ 2: a * b = ' + result_2);
+        } else if (a < 0 && b >= 0 || a >= 0 && b < 0) {
+            let result_3;
+            result_3 = a + b;
+            document.write('Ответ 3: a + b = ' + result_3);
+        } else {
+            document.write('Неправильно введенное число!')
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Задание №4</h1>
+    <p>Реализовать основные 4 арифметические операции (+, -, /, *) в виде функций с двумя параметрами. Т.е. например,
+        функция для сложения должна принимать два числа, складывать их и возвращать результат. Обязательно использовать
+        оператор return.</p>
+
+    <script>
+        'use strict'
+        let num1 = +prompt('Введите первое число');
+        let num2 = +prompt('Введите второе число');
+
+        function sum(num1, num2) {
+            let result = num1 + num2;
+            return result;
+        }
+
+        function minus(num1, num2) {
+            let result_1 = num1 - num2;
+            return result_1;
+        }
+
+        function multiply(num1, num2) {
+            let result_2 = num1 * num2;
+            return result_2;
+        }
+
+        function divide(num1, num2) {
+            let result_3 = num1 / num2;
+            return result_3;
+        }
+
+        document.write('1 число равно: ' + num1 + '<br \ />' + '2 число равно: ' + num2 + '<br \ />');
+        document.write('Сумма равна: ' + sum(num1, num2) + '<br \ />');
+        document.write('Разница равна: ' + minus(num1, num2) + '<br \ />');
+        document.write('Произведение равно: ' + multiply(num1, num2) + '<br \ />');
+        document.write('Деление равно: ' + divide(num1, num2) + '<br \ />');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Задание №5</h1>
+    <p>Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения
+        аргументов, operation – строка с названием операции. В зависимости от переданного значения операции
+        (использовать switch) выполнить одну из арифметических операций (использовать функции из задания 4) и вернуть
+        полученное значение.</p>
+
+    <script>
+        'use strict'
+
+        let num1 = +prompt('Введите первое число');
+        let num2 = +prompt('Введите второе число');
+        let operation = prompt('Введите символ нужной операции: "+", "-", "*" или "/". Вводить без кавычек.');
+        let result;
+
+        function sum(num1, num2) {
+            let result_1 = num1 + num2;
+            return result_1;
+        }
+
+        function minus(num1, num2) {
+            let result_2 = num1 - num2;
+            return result_2;
+        }
+
+        function multiply(num1, num2) {
+            let result_3 = num1 * num2;
+            return result_3;
+        }
+
+        function divide(num1, num2) {
+            let result_4 = num1 / num2;
+            return result_4;
+        }
+
+        function mathOperation(num1, num2, operation) {
+            switch (operation) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    break;
+            }
+            return result;
+        }
+
+        let resultEnd = mathOperation(num1, num2, operation);
+        document.write('1 число равно ' + num1 + '<br \ />');
+        document.write('2 число равно ' + num2 + '<br \ />');
+        document.write('Сейчас производится операция ' + '"' + operation + '"' + '<br \ />');
+        document.write('Ответ: ' + resultEnd);
+    </script>
+</body>
+
+</html>

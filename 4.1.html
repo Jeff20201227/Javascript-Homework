@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Задание №4.1</h1>
+    <p>Сделайте в стиле es5, а затем в стиле es6 (по аналогии из дополнительных
+        видео -> 3 примеры наследования -> типы на es5 и es6), конструктор Product, который принимает параметры name
+        и price, сохраните их как свойства объекта. Также объекты типа Product должны иметь метод
+        make25PercentDiscount, который будет уменьшать цену в объекте на 25%. </p>
+
+    <script>
+        'use scrict';
+
+        // ES5
+
+        function Product(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        Product.prototype.make25PercentDiscount = function () {
+            let discontPrice = this.price * 0.25;
+            let finalPrice = this.price - discontPrice;
+            console.log(finalPrice);
+        };
+
+        let Product1 = new Product('Food', 200); // Получим объект Product1
+        Product1.make25PercentDiscount(); // Получим итоговую стоимость после скидки (150)
+        console.log(Product1);
+
+        // ES6
+
+        class Product_2 {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+
+            make25PercentDiscount() {
+                let discontPrice = this.price * 0.25;
+                let finalPrice = this.price - discontPrice;
+                console.log(finalPrice)
+            }
+        }
+
+        let Product2 = new Product_2('Banana', 100);
+        Product2.make25PercentDiscount();
+        console.log(Product2);
+    </script>
+</body>
+
+</html>

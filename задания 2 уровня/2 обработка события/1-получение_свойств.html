@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <button id="one" class="btn">Кнопка 1</button>
 
@@ -17,4 +19,15 @@
     свойство className), текст на кнопке.
     -->
 </body>
+
+<script>
+    'use strict';
+    let button = document.querySelector('button');
+    button.addEventListener('click', function (event) {
+        console.log(event.target.id);
+        console.log(event.target.className);
+        console.log(event.target.innerText);
+    });
+</script>
+
 </html>

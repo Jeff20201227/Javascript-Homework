@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Задание №4.2</h1>
+    <p>Сделайте в стиле es5, а затем в стиле es6 (по аналогии из дополнительных
+        видео -> 3 примеры наследования -> механика наследования),
+        а) конструктор Post, который принимает параметры author, text, date и сохраняет их как свойства объекта. Объекты
+        типа Post должны иметь метод edit, который будет принимать текст и записывать его в свойство text объекта.
+        б) конструктор AttachedPost, который принимает параметры author, text, date. Проинициализируйте эти свойства с
+        помощью конструктора Post, чтобы не дублировать код. Также в конструкторе AttachedPost должно создаваться
+        свойство highlighted со значением false. Унаследуйте в объектах типа AttachedPost методы из Post.
+        Объекты типа AttachedPost должны иметь метод makeTextHighlighted, который будет назначать свойству
+        highlighted значение true</p>
+
+    <script>
+        'use strict';
+
+        //ES5
+
+        function Post(author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+
+        Post.prototype.edit = function () {
+            this.text = prompt("Введите текст");
+        };
+
+        function AttachedPost(author, text, date) {
+            Post.call(this, author, text, date);
+            this.highlighted = false;
+        }
+
+        AttachedPost.prototype = Object.create(Post.prototype);
+        AttachedPost.prototype.constructor = AttachedPost;
+
+        AttachedPost.prototype.makeTextHighlighted = function () {
+            this.highlighted = true;
+        };
+
+        let book = new AttachedPost('Alex', 'Новый текст', '04.07.2021');
+        console.log(book);
+        book.edit();
+        book.makeTextHighlighted();
+        console.log(book);
+
+        //ES6
+
+        class Post_2 {
+            constructor(author, text, date) {
+                this.author = author;
+                this.text = text;
+                this.date = date;
+            }
+
+            edit() {
+                this.text = prompt("Введите текст");
+            }
+        }
+
+        class AttachedPost_2 extends Post_2 {
+            constructor(author, text, date, highlighted) {
+                super(author, text, date);
+                this.highlighted = false;
+            }
+
+            makeTextHighlighted() {
+                this.highlighted = true;
+            }
+        }
+
+        let book_2 = new AttachedPost_2('Joan', 'Снова переписываем?', '04.07.2021');
+        console.log(book_2);
+        book_2.edit();
+        book_2.makeTextHighlighted();
+        console.log(book_2);
+    </script>
+</body>
+
+</html>

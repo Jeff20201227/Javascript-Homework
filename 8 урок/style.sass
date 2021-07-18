@@ -60,8 +60,8 @@ a
         &:hover
             background-image: url(img/cart_pink.png)
 
-        &:hover .cart_fon
-            display: flex
+    //    &:hover .cart_fon
+     //       display: flex
 
     .header_search
         display: flex
@@ -71,21 +71,41 @@ a
         .header_form
             margin-left: -379px
 
+// .cart_fon
+//     display: none
+//     flex-direction: column
+//     position: absolute
+//     width: 262px
+//     background-color: $backColorHeader
+//     border-radius: 5px
+//     z-index: 1
+//     margin-top: 30px
+
 .cart_fon
-    display: none
+    display: flex
     flex-direction: column
     position: absolute
-    width: 262px
+    width: 400px
     background-color: $backColorHeader
+    border: 2px solid black
     border-radius: 5px
     z-index: 1
-    margin-top: 30px
+    margin-top: 40px
+    padding-bottom: 40px
+    left: -140px
+
+// .cart_product_fon
+//     display: flex
+//     justify-content: flex-start
+//     height: 85px
+//     width: 230px
+//     padding-left: 15px
+//     padding-right: 15px
+//     margin-bottom: 10px
 
 .cart_product_fon
     display: flex
-    justify-content: flex-start
-    height: 85px
-    width: 230px
+    justify-content: center
     padding-left: 15px
     padding-right: 15px
     margin-bottom: 10px
@@ -120,9 +140,12 @@ span.cart_fon_2
     margin-left: -35px
     margin-top: 15px
 
+// .cart_product_text_position_h_2
+//     margin-left: 65px
+//     margin-top: -38px
+//     display: flex
+
 .cart_product_text_position_h_2
-    margin-left: 65px
-    margin-top: -38px
     display: flex
 
 h3.cart_product_h3
@@ -143,13 +166,10 @@ h3.cart_product_h3
     border: $borderAtribute $colorDisainer
 
 .cart_product_fon_button_1_position_1
-    margin-top: 32px
-    margin-bottom: 11px
-    margin-left: 20px
+    margin: 16px auto
 
 .cart_product_fon_button_1_position_2
-    margin-left: 20px
-    margin-bottom: 20px
+    margin: 0 auto
 
 .cart_fon_3
     font-size: 14px
@@ -160,13 +180,37 @@ h3.cart_product_h3
 .cart_fon_3:hover
     color: $colorDisainer
 
+// .borders_cart_2
+//     height: 1px
+//     width: 229px
+//     background-color: #ededed
+//     margin-top: 16px
+//     margin-bottom: 16px
+//     margin-left: 17px
+
 .borders_cart_2
     height: 1px
-    width: 229px
     background-color: #ededed
-    margin-top: 16px
     margin-bottom: 16px
-    margin-left: 17px
+
+.basketRow
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    justify-items: center
+    gap: 10px
+    margin-bottom: 10px
+    border-bottom: 2px solid black
+    align-items: center
+    padding-bottom: 10px
+    padding-left: 15px
+    padding-right: 15px
+    padding-top: 10px
+
+.basketHeader
+    font-weight: bold
+
+.hidden
+    display: none
 
 .logo
     display: flex
@@ -566,7 +610,7 @@ p.center_2
     transform: scale(1.03)
 
 .product:hover .product_img
-    filter: brightness(40%)
+    filter: brightness(70%)
 
 .product:hover .product_add
     display: flex
@@ -576,17 +620,21 @@ p.center_2
     top: 97px
     left: 70px
     display: none
-    justify-content: center
-    align-items: center
-    height: 39px
-    width: 123px
-    border: $borderAtribute $backColorHeader
-    font-size: 13px
-    font-weight: bold
-    color: $backColorHeader
 
 .product_add:hover
     box-shadow: 0px 0px 5px 0px white
+
+button.add_cart_index
+    background: none
+    border: 2px solid white
+    color: white
+    display: flex
+    align-items: center
+    padding: 10px 14px
+    font-size: 14px
+    font-family: inherit
+    flex-direction: column
+    justify-items: center
 
 .product_img
     width: 100%
@@ -605,6 +653,8 @@ p.center_2
     color: $colorDisainer
 
 .product_price
+    display: flex
+    justify-content: center
     font-size: 16px
     font-weight: bold
     color: $colorDisainer

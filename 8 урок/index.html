@@ -64,50 +64,33 @@
                     </ul>
                     <a href="#" class="button_Account">My&nbsp;Account<i class="fas fa-angle-down angle-down"></i></a>
                     <section class="header_cart">
-                        <div>
-                            <div class="cart_fon">
-                                <div class="cart_product_fon">
-                                    <img src="img/cart_1_fon.png" alt="Фото продукта" class="cart_img_fon">
-                                    <ul class="position_text_3">
-                                        <li class="cart_text_fon_1 cart_product_text_position_h_1">Rebox Zane</li>
-                                        <li><span class="cart_fon_2 cart_product_text_position_h_1"><i
-                                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                                    class="fas fa-star"></i></span></li>
-                                        <li><span class="cart_text_fon_3 cart_product_text_position_h_1">1&nbsp;x
-                                                $250</span></li>
-                                        <li><span class="cart_text_4 cart_product_text_position_h_2"><a
-                                                    class="cart_text_4" href="#"><i
-                                                        class="far fa-window-close color_cancel"></i></a></span></li>
-                                    </ul>
-                                </div>
-                                <div class="borders_cart_2"></div>
-                                <div class="cart_product_fon">
-                                    <img src="img/cart_2_fon.png" alt="Фото продукта" class="cart_img_fon">
-                                    <ul class="position_text_3">
-                                        <li class="cart_text_fon_1 cart_product_text_position_h_1">Rebox Zane</li>
-                                        <li><span class="cart_fon_2 cart_product_text_position_h_1"><i
-                                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                                    class="fas fa-star"></i></span></li>
-                                        <li><span class="cart_text_fon_3 cart_product_text_position_h_1">1&nbsp;x
-                                                $250</span></li>
-                                        <li><span class="cart_text_4 cart_product_text_position_h_2"><a
-                                                    class="cart_text_4" href="#"><i
-                                                        class="far fa-window-close color_cancel"></i></a></span></li>
-                                    </ul>
-                                </div>
-                                <div class="borders_cart_2"></div>
-                                <h3 class="cart_product_h3"><span class="h3_1">TOTAL</span><span
-                                        class="h3_1">$500.00</span></h3>
-                                <div><a href="html/checkout.html"><span
-                                            class="cart_product_fon_button_1 cart_product_fon_button_1_position_1 cart_fon_3">Checkout</span></a>
-                                </div>
-                                <div><a href="html/Shopping_Cart.html"><span
-                                            class="cart_product_fon_button_1 cart_product_fon_button_1_position_2 cart_fon_3">Go&nbsp;to&nbsp;cart</span></a>
-                                </div>
+                        <div class="cart_fon hidden">
+                            <div class="cart_product_fon basketRow basketHeader">
+                                <div>Имя товара</div>
+                                <div>Количество товара</div>
+                                <div>Цена товара</div>
+                                <div>Итого</div>
+                                <!-- <ul class="position_text_3">
+                                    <li class="cart_text_fon_1 cart_product_text_position_h_1">Имя товара</li>
+                                    <li class="cart_text_fon_1 cart_product_text_position_h_1">Количество товара</li>
+                                    <li class="cart_text_fon_1 cart_product_text_position_h_1">Цена товара</li>
+                                    <li><span class="cart_text_fon_3 cart_product_text_position_h_1">Итого</span></li>
+                                    <li><span class="cart_text_4 cart_product_text_position_h_2"><a class="cart_text_4"
+                                                href="#"><i class="far fa-window-close color_cancel"></i></a></span>
+                                    </li>
+                                </ul> -->
+                            </div>
+                            <h3 class="cart_product_h3 basketTotal"><span class="h3_1">TOTAL</span><span
+                                    class="h3_1 basketTotalValue">0 $</span>
+                            </h3>
+                            <div><a href="html/checkout.html"><span
+                                        class="cart_product_fon_button_1 cart_product_fon_button_1_position_1 cart_fon_3">Checkout</span></a>
+                            </div>
+                            <div><a href="html/Shopping_Cart.html"><span
+                                        class="cart_product_fon_button_1 cart_product_fon_button_1_position_2 cart_fon_3">Go&nbsp;to&nbsp;cart</span></a>
                             </div>
                         </div>
+
                     </section>
                 </div>
             </header>
@@ -376,6 +359,7 @@
         </div>
 
         <section class="product-box">
+            <!--             
             <div class="product_pack">
                 <div class="product">
                     <a href="html/product.html"><img class="product_img" src="img/catalog_1.png" alt="Товар 1"></a>
@@ -383,7 +367,8 @@
                         <a href="html/product.html" class="product_name">Mango People T-shirt</a>
                         <p class="product_price">$52.00</p>
                     </div>
-                    <a href="#" class="product_add"> <img class="product_cart" src="img/cart_white.png" alt="Корзина">
+                    <a href="#" class="product_add data-productId_1"> <img class="product_cart" src="img/cart_white.png"
+                            alt="Корзина">
                         Add to&nbsp;Cart</a>
                 </div>
                 <div class="product">
@@ -392,7 +377,8 @@
                         <a href="html/product.html" class="product_name">Mango People T-shirt</a>
                         <p class="product_price">$52.00</p>
                     </div>
-                    <a href="#" class="product_add"> <img class="product_cart" src="img/cart_white.png" alt="Корзина">
+                    <a href="#" class="product_add data-productId_2"> <img class="product_cart" src="img/cart_white.png"
+                            alt="Корзина">
                         Add to&nbsp;Cart</a>
                 </div>
                 <div class="product">
@@ -401,7 +387,8 @@
                         <a href="html/product.html" class="product_name">Mango People T-shirt</a>
                         <p class="product_price">$52.00</p>
                     </div>
-                    <a href="#" class="product_add"> <img class="product_cart" src="img/cart_white.png" alt="Корзина">
+                    <a href="#" class="product_add data-productId_3"> <img class="product_cart" src="img/cart_white.png"
+                            alt="Корзина">
                         Add to&nbsp;Cart</a>
                 </div>
                 <div class="product">
@@ -410,7 +397,8 @@
                         <a href="html/product.html" class="product_name">Mango People T-shirt</a>
                         <p class="product_price">$52.00</p>
                     </div>
-                    <a href="#" class="product_add"> <img class="product_cart" src="img/cart_white.png" alt="Корзина">
+                    <a href="#" class="product_add data-productId_4"> <img class="product_cart" src="img/cart_white.png"
+                            alt="Корзина">
                         Add to&nbsp;Cart</a>
                 </div>
             </div>
@@ -421,7 +409,8 @@
                         <a href="html/product.html" class="product_name">Mango People T-shirt</a>
                         <p class="product_price">$52.00</p>
                     </div>
-                    <a href="#" class="product_add"> <img class="product_cart" src="img/cart_white.png" alt="Корзина">
+                    <a href="#" class="product_add data-productId_5"> <img class="product_cart" src="img/cart_white.png"
+                            alt="Корзина">
                         Add to&nbsp;Cart</a>
                 </div>
                 <div class="product">
@@ -430,7 +419,8 @@
                         <a href="html/product.html" class="product_name">Mango People T-shirt</a>
                         <p class="product_price">$52.00</p>
                     </div>
-                    <a href="#" class="product_add"> <img class="product_cart" src="img/cart_white.png" alt="Корзина">
+                    <a href="#" class="product_add data-productId_6"> <img class="product_cart" src="img/cart_white.png"
+                            alt="Корзина">
                         Add to&nbsp;Cart</a>
                 </div>
                 <div class="product">
@@ -439,7 +429,8 @@
                         <a href="html/product.html" class="product_name">Mango People T-shirt</a>
                         <p class="product_price">$52.00</p>
                     </div>
-                    <a href="#" class="product_add"> <img class="product_cart" src="img/cart_white.png" alt="Корзина">
+                    <a href="#" class="product_add data-productId_7"> <img class="product_cart" src="img/cart_white.png"
+                            alt="Корзина">
                         Add to&nbsp;Cart</a>
                 </div>
                 <div class="product">
@@ -448,10 +439,12 @@
                         <a href="html/product.html" class="product_name">Mango People T-shirt</a>
                         <p class="product_price">$52.00</p>
                     </div>
-                    <a href="#" class="product_add"> <img class="product_cart" src="img/cart_white.png" alt="Корзина">
+                    <a href="#" class="product_add data-productId_8"> <img class="product_cart" src="img/cart_white.png"
+                            alt="Корзина">
                         Add to&nbsp;Cart</a>
                 </div>
-            </div>
+            </div> -->
+
         </section>
 
         <div>
@@ -570,6 +563,10 @@
         </footer>
     </div>
     <script src="https://kit.fontawesome.com/c02d82dd2f.js" crossorigin="anonymous"></script>
+    <script src="scripts/basket/ProductDTO.js"></script>
+    <script src="scripts/basket/products.js"></script>
+    <script src="scripts/basket/productsCards.js"></script>
+    <script src="scripts/basket/basket.js"></script>
 </body>
 
 </html>
